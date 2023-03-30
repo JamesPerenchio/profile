@@ -1,0 +1,176 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            width: 80%;
+            margin: 2em auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: .5em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+        }
+
+        .project-description {
+            flex: 1;
+        }
+
+        .project img {
+            max-width: 150px;
+            margin-right: 1em;
+        }
+        .header_index{
+
+        }
+
+
+                /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+          }
+          
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+          
+          input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+          }
+          
+          button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+          
+          button[type="submit"]:hover {
+            background-color: #3e8e41;
+          }
+          
+        .logintop a{
+            float: right;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .logintop a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .pp1{
+            padding-left: 20px;
+        }
+        .james-port{
+            padding-right: 380px;
+        }
+
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project img {
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .box {
+            width: 300px;
+            height: 400px;
+            margin: 20px;
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          
+          .box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center top;
+          }
+          
+          .box p {
+            font-size: 20px;
+            margin: 10px 0;
+          }
+          
+          .box a {
+            display: block;
+            height: 100%;
+          }
+          .about_margin{
+            margin-left: 20px;
+          }
