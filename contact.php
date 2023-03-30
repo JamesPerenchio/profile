@@ -1,4 +1,9 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["name"];
   $email = $_POST["email"];
@@ -6,15 +11,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $message = $_POST["message"];
 
   // Send email
-  $to = "jamyangp21@live.co.uk";
-  $subject = "New message from $name";
-  $body = "From: $name\nEmail: $email\nMessage: $message";
-  $headers = "From: $email";
+  $mail = new PHPMailer(true);
+  try {
+    //Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'grandmatits69@gmail.com';
+    $mail->Password   = 'Grandmatits';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
-  if (mail($to, $subject, $body, $headers)) {
+    //Recipients
+    $mail->setFrom($email, $name);
+    $mail->addAddress('youremail@example.com', 'Your Name');
+
+    //Content
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+
+    $mail->send();
     echo "Message sent!";
-  } else {
-    echo "Error sending message.";
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 }
 ?>
